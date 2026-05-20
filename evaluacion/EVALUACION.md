@@ -4,7 +4,7 @@
 
 ### Datos de la Pareja
 
-* **Nombre 1:** ________________________________________
+* **Nombre 1:** Laura Gimenez_________________________________
 * **Nombre 2:** ________________________________________
 
 ---
@@ -33,11 +33,11 @@ Su examen consiste en completar la **Gestión de Módulos y Preguntas** dentro d
 1. **Tablas:** Asegúrese de tener creadas las tablas `modulo` y `pregunta` (ver scripts en `README.md`).
 2. **Datos:** Inserte manualmente en phpMyAdmin los 4 módulos: *Architecture, Anthropology, Calculus, Sports*.
 3. **Análisis de Integridad:** En el script SQL, la relación tiene la instrucción `ON DELETE CASCADE`. ¿Qué sucede con las preguntas asociadas si eliminamos un módulo de la tabla `modulo`?
-* *R:* ________________________________________________
+* *R:* Se borran todas solas. Como están en el módulo, al quitar el tema, las preguntas dejan de existir para que no queden estorbando en la base de datos.
 
 
 4. **Tipos de Datos:** ¿Por qué es obligatorio que el campo `id_modulo` (en `pregunta`) tenga el mismo tipo de dato que el `id` (en `modulo`) para que la relación funcione?
-* *R:* ________________________________________________
+* *R:* Porque para que encajen tienen que ser iguales. No puedes conectar un número con una letra; si el original es un número, la copia tiene que ser un número para que el sistema los reconozca.
 
 
 
@@ -62,11 +62,11 @@ Su examen consiste en completar la **Gestión de Módulos y Preguntas** dentro d
 ### FASE 4: Preguntas Teóricas
 
 1. **Lógica:** Si al abrir la ventana de preguntas estas aparecen vacías para todos los módulos (pero no hay errores de código), ¿qué objeto revisaría primero: la `Conexion` o la consulta `SQL`? Justifique.
-* *R:* ________________________________________________
+* *R:* La consulta SQL. Si no da error es porque la conexión sirve, así que el problema debe ser que escribí mal la orden o pedí algo que no existe en las tablas.
 
 
 2. **Encapsulamiento:** ¿Cuál es la ventaja de recibir el ID mediante el **Constructor** y guardarlo en una variable `private`, en lugar de simplemente declarar una variable `public` que cualquiera pueda modificar?
-* *R:* ________________________________________________
+* *R:* Por seguridad y orden. Así el ID llega directo a donde tiene que ir y nadie lo puede cambiar por accidente desde otro lado mientras el programa está corriendo.
 
 
 
